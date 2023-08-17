@@ -1,41 +1,64 @@
 # TaskApp
 
-TaskApp is a full-stack web application built using **Node.js**, **Express.js**, **React**, and **MySQL**. The app provides users with the ability to manage their tasks by creating, updating, and deleting them. Whether you need a simple to-do list or a task manager, TaskApp has you covered.
+TaskApp is a web application built using Node.js, Express.js, React, and MySQL. It allows users to manage their tasks by creating, updating, and deleting them.
 
 ## Features
 
-- **User Authentication:** Users can create accounts, log in, and log out to securely manage their tasks.
-- **Task Management:** Users can create new tasks, update task details, and mark tasks as complete.
-- **Responsive UI:** The app's user interface is built using React, ensuring a seamless experience across different devices and screen sizes.
-- **Dark Mode:** Users can toggle between light and dark mode to suit their preferences.
-- **Persistent Data:** Tasks are stored in a MySQL database, ensuring data persistence and reliability.
-- **Intuitive UI:** The user interface is designed to be user-friendly and easy to navigate.
-- **Secure:** User authentication and data privacy are prioritized to ensure a safe user experience.
+- User authentication: Users can register and log in to the app.
+- Create Task: Users can create new tasks with a title, description, due date, and status.
+- Update Task: Users can update the status of their tasks.
+- Delete Task: Users can delete tasks they no longer need.
 
-## Technology Stack
+## Tech Stack
 
-- **Frontend:** React.js
+- **Frontend:** React
 - **Backend:** Node.js, Express.js
 - **Database:** MySQL
 
-## Getting Started
+## Installation and Setup
 
-1. Clone the repository: `git clone <repository_url>`
-2. Navigate to the "backend" folder and install dependencies: `cd backend && npm install`
-3. Set up your MySQL database and update the database configuration in the backend.
-4. Start the backend server: `npm start`
-5. Navigate to the "client" folder and install dependencies: `cd ../client && npm install`
-6. Start the frontend development server: `npm start`
-7. Access the app in your browser at `http://localhost:3000`
+### Frontend
+
+1. Navigate to the `client` folder.
+2. Run `npm install` to install frontend dependencies.
+3. Modify the API URLs in the frontend code to point to your backend server.
+
+### Backend
+
+1. Navigate to the `backend` folder.
+2. Run `npm install` to install backend dependencies.
+3. Create a MySQL database and update the database configuration in `config/db.config.js`.
+4. Run the database migrations using `npx sequelize-cli db:migrate`.
+5. Seed the database with sample data using `npx sequelize-cli db:seed:all`.
 
 ## Usage
 
-1. Register or log in to your account.
-2. Create new tasks by providing a title, description, and due date.
-3. View your tasks on the main dashboard.
-4. Update a task's status as "In Progress" or "Completed."
-5. Edit task details by clicking on a task.
-6. Delete tasks you no longer need.
+1. Run the frontend and backend servers using `npm start` in their respective folders.
+2. Open your browser and navigate to `http://localhost:3000` to access the app.
+
+## Contribution
+
+Contributions to TaskApp are welcome! Here's how you can contribute:
+
+1. Fork the repository.
+2. Clone your forked repository to your local machine.
+3. Create a new branch for your feature or bug fix.
+4. Make your changes and commit them.
+5. Push your changes to your forked repository.
+6. Create a pull request to the original repository.
+
+## Deployment
+
+### Heroku
+
+1. Sign up for a free Heroku account.
+2. Install the Heroku CLI on your local machine.
+3. Create a `Procfile` in the backend folder to specify the command to start the server on Heroku.
+4. Connect your Heroku account to your GitHub repository.
+5. Create a new app on Heroku.
+6. Deploy the app from your GitHub repository.
+7. Update your frontend code to make API requests to the Heroku app's URL.
+
 
 ## Dark Mode
 
